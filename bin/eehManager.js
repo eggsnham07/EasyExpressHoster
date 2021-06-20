@@ -17,9 +17,9 @@ if(process.argv[2] == "start") {
 
     if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
         console.log("First time setup starting...")
-        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster")
-        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster\\Pages")
-        fs.writeFileSync(home + "\\Documents\\EasyExpressHoster\\Pages", html)
+        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster").then(
+        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster\\Pages").then(
+        fs.writeFileSync(home + "\\Documents\\EasyExpressHoster\\Pages", html)))
         console.log("Setup complete!")
     }
     server(process.argv[3])
