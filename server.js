@@ -3,7 +3,7 @@ module.exports = function server(port) {
     const home = require("os").homedir
     const app = express()
 
-    app.use(express.static(home + "\\Documents\\EasyExpressHosting\\Pages"))
+    app.use(express.static(home + "\\Documents\\EasyExpressHoster\\Pages"))
 
     app.listen(port, () => {
         console.log("Server listening on http://localhost:" + port)
