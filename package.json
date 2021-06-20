@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/eggsnham07/EasyExpressHoster#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "open": "^8.2.1"
   }
 }
