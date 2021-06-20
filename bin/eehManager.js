@@ -15,7 +15,7 @@ if(process.argv[2] == "start") {
         </body>
     </html>`
 
-    if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster\\Pages")) {
+    if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
         console.log("First time setup starting...")
         if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
             fs.mkdirSync(home + "\\Documents\\EasyExpressHoster")
