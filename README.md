@@ -2,6 +2,8 @@
 
 install: `npm i easyexpresshoster -g`
 
+## PLEASE do not use yet! this package is still being worked on and does not function correctly!
+
 ### quick start
 
 ```console
