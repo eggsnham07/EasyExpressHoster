@@ -1,0 +1,30 @@
+{
+  "name": "easyexpresshoster",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "eeh start 5000"
+  },
+  "bin": {
+    "ehh": "./bin/eehManager"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eggsnham07/EasyExpressHoster.git"
+  },
+  "keywords": [
+    "express",
+    "js",
+    "expressjs"
+  ],
+  "author": "eggsnham07",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eggsnham07/EasyExpressHoster/issues"
+  },
+  "homepage": "https://github.com/eggsnham07/EasyExpressHoster#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
