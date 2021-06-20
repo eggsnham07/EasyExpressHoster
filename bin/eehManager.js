@@ -1,3 +1,5 @@
 const server = require("../server")
 
-server(process.argv[2])
+if(process.argv[2] == "start") {
+    server(process.argv[3])
+}
