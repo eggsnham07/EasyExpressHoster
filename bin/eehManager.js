@@ -17,10 +17,10 @@ if(process.argv[2] == "start") {
 
     if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
         console.log("First time setup starting...")
-        if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
-            fs.mkdirSync(home + "\\Documents\\EasyExpressHoster")
+        if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster\\Pages")) {
             fs.mkdirSync(home + "\\Documents\\EasyExpressHoster\\Pages")
-        } else if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster\\Pages")) {
+        } else {
+            fs.mkdirSync(home + "\\Documents\\EasyExpressHoster")
             fs.mkdirSync(home + "\\Documents\\EasyExpressHoster\\Pages")
         }
         fs.writeFileSync(home + "\\Documents\\EasyExpressHoster\\Pages", html)
