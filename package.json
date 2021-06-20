@@ -7,7 +7,7 @@
     "start": "eeh start 5000"
   },
   "bin": {
-    "ehh": "./bin/eehManager"
+    "eeh": "./bin/eehManager.js"
   },
   "repository": {
     "type": "git",
