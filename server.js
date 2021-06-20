@@ -7,5 +7,6 @@ module.exports = function server(port) {
 
     app.listen(port, () => {
         console.log("Server listening on http://localhost:" + port)
+        console.log("Press CTRL + C to stop")
     })
 }

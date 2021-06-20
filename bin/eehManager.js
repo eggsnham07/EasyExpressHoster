@@ -4,24 +4,34 @@ const server = require("../server")
 const open = require("open")
 const fs = require("fs")
 
-if(process.argv[2] == "start") {
-    const html = `<!DOCTYPE html>
-    <html>
-        <head>
-            <title>Easy Express Hoster</title>
-        </head>
-        <body>
-            <h1>Welcome to the Home Page!</h1>
-        </body>
-    </html>`
+const html = `<!DOCTYPE html>
+<html>
+    <head>
+        <title>Easy Express Hoster</title>
+    </head>
+    <body>
+        <h1>Welcome to the Home Page!</h1>
+    </body>
+</html>`
 
+function begin() {
+    return new Promise(resolve => {
+        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster")
+        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster\\Pages")
+        fs.writeFileSync(home + "\\Documents\\EasyExpressHoster\\Pages\\index.html", html)
+        resolve('Completed!\n')
+    })
+}
+
+if(process.argv[2] == "start") {
     if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
-        console.log("First time setup starting...")
-        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster").then(
-        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster\\Pages").then(
-        fs.writeFileSync(home + "\\Documents\\EasyExpressHoster\\Pages", html)))
-        console.log("Setup complete!")
+        async function setup() {
+            console.log("First time setup starting...\n")
+            console.log(await begin())
+            server(process.argv[3])
+        }
+        setup()
+    } else {
+        server(process.argv[3])
     }
-    server(process.argv[3])
-    open('http://localhost:' + process.argv[3])
 }
