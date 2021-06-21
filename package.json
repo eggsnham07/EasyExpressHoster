@@ -26,5 +26,9 @@
   "homepage": "https://github.com/eggsnham07/EasyExpressHoster#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   }
 }
