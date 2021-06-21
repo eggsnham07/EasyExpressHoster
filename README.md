@@ -24,4 +24,4 @@ Press CTRL + C to stop
 ```
 
 
-all pages can found and edited in `C:\Users\you\Documents\EasyExpressHosting\Pages`
+all pages can found and edited in `C:\Users\you\Documents\EasyExpressHoster\Pages` or `/home/you/Documents/EasyExpressHoster/Pages`
