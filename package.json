@@ -1,6 +1,6 @@
 {
   "name": "@eggsnham07/easyexpresshoster",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "server.js",
   "scripts": {
