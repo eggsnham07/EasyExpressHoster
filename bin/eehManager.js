@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const home = require("os").homedir()
 const server = require("../server")
+const betaServer = require("../serverBeta")
 const open = require("open")
 const fs = require("fs")
 
@@ -24,14 +25,18 @@ function begin() {
 }
 
 if(process.argv[2] == "start") {
-    if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
-        async function setup() {
-            console.log("First time setup starting...\n")
-            console.log(await begin())
+    if(process.argv[4] == "~") {
+        betaServer(process.argv[3], process.cwd())
+    } else {
+        if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
+            async function setup() {
+                console.log("First time setup starting...\n")
+                console.log(await begin())
+                server(process.argv[3])
+            }
+            setup()
+        } else {
             server(process.argv[3])
         }
-        setup()
-    } else {
-        server(process.argv[3])
     }
 }
