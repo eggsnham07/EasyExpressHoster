@@ -9,3 +9,5 @@ module.exports = function betaServer(port, path) {
         console.log("Press CTRL + C to stop")
     })
 }
+
+server.setPort(80)
