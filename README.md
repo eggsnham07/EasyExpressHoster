@@ -5,7 +5,16 @@ please feel free to make issues and pull requests on github!
 
 installation: `npm i easyexpresshoster -g`
 
-### quick start
+### Node.js: Quick start
+```javascript
+const Server = require("easyexpresshoster")
+const server = new Server
+server.dir = process.env.EEHDIR || process.cwd
+server.port = 5000
+server.start()
+```
+
+### Terminal: Quick start
 if you are using this for the first time you should see something like this:
 ```console
 > eeh start 80
