@@ -7,7 +7,7 @@ installation: `npm i easyexpresshoster -g`
 
 ### Node.js: Quick start
 ```javascript
-const Server = require("easyexpresshoster")
+const Server = require("@eggsnham07/easyexpresshoster")
 const server = new Server
 server.dir = process.env.EEHDIR || process.cwd
 server.port = 5000
