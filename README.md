@@ -14,6 +14,8 @@ server.port = 5000
 server.start()
 ```
 
+you can also use a function called `server.post` or `server.get` and use it like express
+
 ### Terminal: Quick start
 if you are using this for the first time you should see something like this:
 ```console
