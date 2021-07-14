@@ -17,7 +17,7 @@ server.start()
 
 #### Node.js: Features
 You can use `server.usePrettyUrls()` to make /page.html become /page and if /page is a dir then /page.html will be redirected to /page/ 
-, and `server.post` or `server.get` work like express's express().post or express.get
+, also `server.post` or `server.get` work like express's express().post or express.get
 
 ### Terminal: Quick start
 if you are using this for the first time you should see something like this:
