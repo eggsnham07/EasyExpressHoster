@@ -2,7 +2,6 @@
 const home = require("os").homedir()
 const server = require("../server")
 const betaServer = require("../serverBeta")
-const open = require("open")
 const fs = require("fs")
 
 const html = `<!DOCTYPE html>
