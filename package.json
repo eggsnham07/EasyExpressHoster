@@ -1,13 +1,13 @@
 {
   "name": "@eggsnham07/easyexpresshoster",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "",
   "main": "api.js",
   "scripts": {
     "start": "eeh start 5000"
   },
   "bin": {
-    "eeh": "./bin/eehManager.js"
+    "eeh": "bin/eehManager.js"
   },
   "repository": {
     "type": "git",
