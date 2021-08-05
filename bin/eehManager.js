@@ -16,18 +16,18 @@ const html = `<!DOCTYPE html>
 
 function begin() {
     return new Promise(resolve => {
-        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster")
-        fs.mkdirSync(home + "\\Documents\\EasyExpressHoster\\Pages")
-        fs.writeFileSync(home + "\\Documents\\EasyExpressHoster\\Pages\\index.html", html)
+        fs.mkdirSync(home + "/Documents/EasyExpressHoster")
+        fs.mkdirSync(home + "/Documents/EasyExpressHoster/Pages")
+        fs.writeFileSync(home + "/Documents/EasyExpressHoster/Pages/index.html", html)
         resolve('Completed!\n')
     })
 }
 
 if(process.argv[2] == "start") {
-    if(process.argv[4] == "~") {
+    if(process.argv[4] == "current") {
         betaServer(process.argv[3], process.cwd())
     } else {
-        if(!fs.existsSync(home + "\\Documents\\EasyExpressHoster")) {
+        if(!fs.existsSync(home + "/Documents/EasyExpressHoster")) {
             async function setup() {
                 console.log("First time setup starting...\n")
                 console.log(await begin())
@@ -38,4 +38,5 @@ if(process.argv[2] == "start") {
             server(process.argv[3])
         }
     }
+    console.log(process.argv.join(", "))
 }

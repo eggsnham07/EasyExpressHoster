@@ -9,7 +9,6 @@ installation: `npm i easyexpresshoster -g`
 ```javascript
 const Server = require("@eggsnham07/easyexpresshoster")
 const server = new Server
-//tip: you can replace process.cwd with "~" currentfolder/pages
 server.dir = process.env.EEHDIR || process.cwd
 server.port = 5000 
 server.start()
@@ -38,7 +37,7 @@ Press CTRL + C to stop
 ```
 
 #### Terminal: Features
-If you do not want to use the default pages directory then you can add '~' at the end of the command to use the terminal's current directory
+If you do not want to use the default pages directory then you can add 'current' at the end of the command to use the terminal's current directory
 
 
 all pages can found and edited in `C:\Users\you\Documents\EasyExpressHoster\Pages` or `/home/you/Documents/EasyExpressHoster/Pages`
