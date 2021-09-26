@@ -5,7 +5,8 @@ const app = express()
 module.exports = class Server {
     constructor() {
         this.start = function() {
-            if(this.dir == "~") {
+            var thisdirs = [ "~", "current", "here" ]
+            if(thisdirs.includes(this.dir)) {
                 this.dir = process.cwd() + "/pages"
             }
 

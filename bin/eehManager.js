@@ -24,7 +24,7 @@ function begin() {
 }
 
 if(process.argv[2] == "start") {
-    if(process.argv[4] == "current") {
+    if(["here", "current", "~"].includes(process.argv[4])) {
         betaServer(process.argv[3], process.cwd())
     } else {
         if(!fs.existsSync(home + "/Documents/EasyExpressHoster")) {
