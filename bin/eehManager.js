@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const home = require("os").homedir()
 const server = require("../server")
-const betaServer = require("../serverBeta")
+const betaServer = require("../serverDir")
 const fs = require("fs")
 
 const html = `<!DOCTYPE html>
@@ -14,8 +14,8 @@ const html = `<!DOCTYPE html>
     </body>
 </html>`
 
-function begin() {
-    return new Promise(resolve => {
+async function begin() {
+    return new Promise((resolve, reject) => {
         fs.mkdirSync(home + "/Documents/EasyExpressHoster")
         fs.mkdirSync(home + "/Documents/EasyExpressHoster/Pages")
         fs.writeFileSync(home + "/Documents/EasyExpressHoster/Pages/index.html", html)
